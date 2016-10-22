@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A01FC19C1DBBCFAA00E61D7A /* Cat.sks in Resources */ = {isa = PBXBuildFile; fileRef = A01FC19B1DBBCFAA00E61D7A /* Cat.sks */; };
+		A01FC19E1DBBD76800E61D7A /* CatCurl.sks in Resources */ = {isa = PBXBuildFile; fileRef = A01FC19D1DBBD76800E61D7A /* CatCurl.sks */; };
+		A01FC1A01DBBD81F00E61D7A /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = A01FC19F1DBBD81F00E61D7A /* CatWakeUp.sks */; };
 		A0E762E51DBBC58F00CF5F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E762E41DBBC58F00CF5F70 /* AppDelegate.swift */; };
 		A0E762E71DBBC58F00CF5F70 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0E762E61DBBC58F00CF5F70 /* GameScene.sks */; };
 		A0E762E91DBBC58F00CF5F70 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0E762E81DBBC58F00CF5F70 /* Actions.sks */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		A01FC19B1DBBCFAA00E61D7A /* Cat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cat.sks; sourceTree = "<group>"; };
+		A01FC19D1DBBD76800E61D7A /* CatCurl.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurl.sks; sourceTree = "<group>"; };
+		A01FC19F1DBBD81F00E61D7A /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
 		A0E762E11DBBC58F00CF5F70 /* CatNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E762E41DBBC58F00CF5F70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0E762E61DBBC58F00CF5F70 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			children = (
 				A0E762E61DBBC58F00CF5F70 /* GameScene.sks */,
 				A01FC19B1DBBCFAA00E61D7A /* Cat.sks */,
+				A01FC19D1DBBD76800E61D7A /* CatCurl.sks */,
+				A01FC19F1DBBD81F00E61D7A /* CatWakeUp.sks */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -171,6 +177,8 @@
 				A0E762E71DBBC58F00CF5F70 /* GameScene.sks in Resources */,
 				A0E763021DBBC84F00CF5F70 /* backgroundMusic.mp3 in Resources */,
 				A0E763051DBBC84F00CF5F70 /* pop.mp3 in Resources */,
+				A01FC1A01DBBD81F00E61D7A /* CatWakeUp.sks in Resources */,
+				A01FC19E1DBBD76800E61D7A /* CatCurl.sks in Resources */,
 				A0E762F21DBBC58F00CF5F70 /* Assets.xcassets in Resources */,
 				A0E763061DBBC84F00CF5F70 /* win.mp3 in Resources */,
 				A0E763041DBBC84F00CF5F70 /* mrreow.mp3 in Resources */,
