@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A01FC19C1DBBCFAA00E61D7A /* Cat.sks in Resources */ = {isa = PBXBuildFile; fileRef = A01FC19B1DBBCFAA00E61D7A /* Cat.sks */; };
 		A0E762E51DBBC58F00CF5F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E762E41DBBC58F00CF5F70 /* AppDelegate.swift */; };
 		A0E762E71DBBC58F00CF5F70 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0E762E61DBBC58F00CF5F70 /* GameScene.sks */; };
 		A0E762E91DBBC58F00CF5F70 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0E762E81DBBC58F00CF5F70 /* Actions.sks */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A01FC19B1DBBCFAA00E61D7A /* Cat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cat.sks; sourceTree = "<group>"; };
 		A0E762E11DBBC58F00CF5F70 /* CatNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E762E41DBBC58F00CF5F70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0E762E61DBBC58F00CF5F70 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -51,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A01FC19A1DBBCF7300E61D7A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A0E762E61DBBC58F00CF5F70 /* GameScene.sks */,
+				A01FC19B1DBBCFAA00E61D7A /* Cat.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 		A0E762D81DBBC58E00CF5F70 = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +81,9 @@
 		A0E762E31DBBC58F00CF5F70 /* CatNap */ = {
 			isa = PBXGroup;
 			children = (
+				A01FC19A1DBBCF7300E61D7A /* Scenes */,
 				A0E762FC1DBBC82E00CF5F70 /* Sounds */,
 				A0E762E41DBBC58F00CF5F70 /* AppDelegate.swift */,
-				A0E762E61DBBC58F00CF5F70 /* GameScene.sks */,
 				A0E762E81DBBC58F00CF5F70 /* Actions.sks */,
 				A0E762EA1DBBC58F00CF5F70 /* GameScene.swift */,
 				A0E762EC1DBBC58F00CF5F70 /* GameViewController.swift */,
@@ -166,6 +177,7 @@
 				A0E763031DBBC84F00CF5F70 /* lose.mp3 in Resources */,
 				A0E762F51DBBC58F00CF5F70 /* LaunchScreen.storyboard in Resources */,
 				A0E762E91DBBC58F00CF5F70 /* Actions.sks in Resources */,
+				A01FC19C1DBBCFAA00E61D7A /* Cat.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +354,7 @@
 				A0E762FB1DBBC58F00CF5F70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
