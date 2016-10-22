@@ -25,7 +25,9 @@ class GameViewController: UIViewController {
                 view.presentScene(scene)
             }
             
-            view.ignoresSiblingOrder = true
+            view.ignoresSiblingOrder = false;
+            // Makes the nodes with the same zPosition to be drawn in the order in which they are added to the scene.
+            // There is a performance cost associated with this change. This is only recommended for small projects such as this.
             
             view.showsFPS = true
             view.showsNodeCount = true

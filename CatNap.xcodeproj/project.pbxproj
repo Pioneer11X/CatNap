@@ -15,6 +15,11 @@
 		A0E762F01DBBC58F00CF5F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E762EE1DBBC58F00CF5F70 /* Main.storyboard */; };
 		A0E762F21DBBC58F00CF5F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E762F11DBBC58F00CF5F70 /* Assets.xcassets */; };
 		A0E762F51DBBC58F00CF5F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E762F31DBBC58F00CF5F70 /* LaunchScreen.storyboard */; };
+		A0E763021DBBC84F00CF5F70 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0E762FD1DBBC84F00CF5F70 /* backgroundMusic.mp3 */; };
+		A0E763031DBBC84F00CF5F70 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0E762FE1DBBC84F00CF5F70 /* lose.mp3 */; };
+		A0E763041DBBC84F00CF5F70 /* mrreow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0E762FF1DBBC84F00CF5F70 /* mrreow.mp3 */; };
+		A0E763051DBBC84F00CF5F70 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0E763001DBBC84F00CF5F70 /* pop.mp3 */; };
+		A0E763061DBBC84F00CF5F70 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0E763011DBBC84F00CF5F70 /* win.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		A0E762F11DBBC58F00CF5F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0E762F41DBBC58F00CF5F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0E762F61DBBC58F00CF5F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E762FD1DBBC84F00CF5F70 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		A0E762FE1DBBC84F00CF5F70 /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
+		A0E762FF1DBBC84F00CF5F70 /* mrreow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mrreow.mp3; sourceTree = "<group>"; };
+		A0E763001DBBC84F00CF5F70 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		A0E763011DBBC84F00CF5F70 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 		A0E762E31DBBC58F00CF5F70 /* CatNap */ = {
 			isa = PBXGroup;
 			children = (
+				A0E762FC1DBBC82E00CF5F70 /* Sounds */,
 				A0E762E41DBBC58F00CF5F70 /* AppDelegate.swift */,
 				A0E762E61DBBC58F00CF5F70 /* GameScene.sks */,
 				A0E762E81DBBC58F00CF5F70 /* Actions.sks */,
@@ -71,6 +82,18 @@
 				A0E762F61DBBC58F00CF5F70 /* Info.plist */,
 			);
 			path = CatNap;
+			sourceTree = "<group>";
+		};
+		A0E762FC1DBBC82E00CF5F70 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A0E762FD1DBBC84F00CF5F70 /* backgroundMusic.mp3 */,
+				A0E762FE1DBBC84F00CF5F70 /* lose.mp3 */,
+				A0E762FF1DBBC84F00CF5F70 /* mrreow.mp3 */,
+				A0E763001DBBC84F00CF5F70 /* pop.mp3 */,
+				A0E763011DBBC84F00CF5F70 /* win.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +158,12 @@
 			files = (
 				A0E762F01DBBC58F00CF5F70 /* Main.storyboard in Resources */,
 				A0E762E71DBBC58F00CF5F70 /* GameScene.sks in Resources */,
+				A0E763021DBBC84F00CF5F70 /* backgroundMusic.mp3 in Resources */,
+				A0E763051DBBC84F00CF5F70 /* pop.mp3 in Resources */,
 				A0E762F21DBBC58F00CF5F70 /* Assets.xcassets in Resources */,
+				A0E763061DBBC84F00CF5F70 /* win.mp3 in Resources */,
+				A0E763041DBBC84F00CF5F70 /* mrreow.mp3 in Resources */,
+				A0E763031DBBC84F00CF5F70 /* lose.mp3 in Resources */,
 				A0E762F51DBBC58F00CF5F70 /* LaunchScreen.storyboard in Resources */,
 				A0E762E91DBBC58F00CF5F70 /* Actions.sks in Resources */,
 			);
