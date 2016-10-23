@@ -29,6 +29,7 @@ class MessageNode: SKLabelNode{
         
         physicsBody!.collisionBitMask = PhysicsCategory.Edge;
         physicsBody!.categoryBitMask = PhysicsCategory.Label;
+        physicsBody!.contactTestBitMask = PhysicsCategory.Edge;
         
         physicsBody!.restitution = 0.7;
     }

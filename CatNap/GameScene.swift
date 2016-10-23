@@ -32,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var catNode: CatNode!;
     
     var playable = true;
+    var noOfBounces: Int = 0;
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
@@ -120,18 +121,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        if !playable {
-            return;
+        
+//        if !playable {
+//            return;
+//      
+//    }
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask;
+        
+        if collision == PhysicsCategory.Label | PhysicsCategory.Edge{
+            if noOfBounces >= 4{
+                perform(#selector(newGame), with: nil, afterDelay: 0.1);
+                noOfBounces = 0;
+            }else{
+                noOfBounces += 1;
+            }
         }
         
-        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask;
-        if collision == PhysicsCategory.Cat | PhysicsCategory.Bed {
-            print("Success");
-            win();
-        }else{
-            print("Fail");
-            lose();
+        
+        if playable{
+            if collision == PhysicsCategory.Cat | PhysicsCategory.Bed {
+                print("Success");
+                win();
+            }else{
+                print("Fail");
+                lose();
+            }
         }
+        
         
     }
     
@@ -154,7 +170,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3");
         
         inGameMessage(text: "Try Again..");
-        perform(#selector(newGame), with: nil, afterDelay: 5);
+        
         catNode.wakeUp();
     }
     
@@ -164,7 +180,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().playSoundEffect("win.mp3");
         
         inGameMessage(text: "Nice Job");
-        perform(#selector(newGame), with: nil, afterDelay: 3);
+//        perform(#selector(newGame), with: nil, afterDelay: 3);
         catNode.curlAlt(scenePoint: bedNode.position);
     }
 }
