@@ -9,32 +9,58 @@
 import SpriteKit
 import GameplayKit
 
+protocol EventListenerNode{
+    func didMoveToScene();
+}
+
+protocol InteractiveMode{
+    func interact();
+}
+
+struct PhysicsCategory {
+    static let None: UInt32 = 0;
+    static let Cat: UInt32 = 1;
+    static let Block: UInt32 = 2;
+    static let Bed: UInt32 = 4;
+}
+
 class GameScene: SKScene {
+    
+    var bedNode: BedNode!;
+    var catNode: CatNode!;
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
+        bedNode = childNode(withName: "bed") as! BedNode;
+        catNode = childNode(withName: "//cat_body") as! CatNode;
+        
+//        bedNode.setScale(1.5);
+//        catNode.setScale(1.5);
+        
+        // Calculate Playable margin
+        let maxAspectRatio: CGFloat = 16.0/9.0;
+        let maxAspectRatioheight = size.width / maxAspectRatio;
+        let playableMargin: CGFloat = ( size.height - maxAspectRatioheight)/2;
+        
+        let playableRect = CGRect(x:0, y: playableMargin, width: size.width, height: size.height - playableMargin * 2);
+        
+        physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect);
+        
+        enumerateChildNodes(withName: "//*"){
+            // Matches all nodes.
+            node, _ in
+            print(node.name);
+            if let eventListenerNode = node as? EventListenerNode{
+                // macthes only BedNode. ( Only that node conforms to the protocol.
+                eventListenerNode.didMoveToScene();
+            }
         }
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+//        SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3");
         
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
     }
     
     
