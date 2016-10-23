@@ -31,6 +31,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bedNode: BedNode!;
     var catNode: CatNode!;
     
+    var playable = true;
+    
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
@@ -118,9 +120,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
+        if !playable {
+            return;
+        }
+        
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask;
         if collision == PhysicsCategory.Cat | PhysicsCategory.Bed {
             print("Success");
+            win();
         }else{
             print("Fail");
             lose();
@@ -141,10 +148,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func lose(){
+        playable = false;
+        
         SKTAudio.sharedInstance().pauseBackgroundMusic();
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3");
         
         inGameMessage(text: "Try Again..");
         perform(#selector(newGame), with: nil, afterDelay: 5);
+        catNode.wakeUp();
+    }
+    
+    func win(){
+        playable = false;
+        SKTAudio.sharedInstance().pauseBackgroundMusic();
+        SKTAudio.sharedInstance().playSoundEffect("win.mp3");
+        
+        inGameMessage(text: "Nice Job");
+        perform(#selector(newGame), with: nil, afterDelay: 3);
+        catNode.curlAlt(scenePoint: bedNode.position);
     }
 }
