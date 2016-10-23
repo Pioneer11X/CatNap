@@ -23,6 +23,7 @@
 		A0B65D5C1DBC5CF7004A217B /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B65D501DBC5CF7004A217B /* SKTTimingFunctions.swift */; };
 		A0B65D5D1DBC5CF7004A217B /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B65D511DBC5CF7004A217B /* Vector3.swift */; };
 		A0B65D5F1DBC5F79004A217B /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B65D5E1DBC5F79004A217B /* BlockNode.swift */; };
+		A0B65D611DBD15D4004A217B /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B65D601DBD15D4004A217B /* MessageNode.swift */; };
 		A0D3D45E1DBC32020052CDF3 /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D3D45D1DBC32020052CDF3 /* BedNode.swift */; };
 		A0D3D4601DBC34260052CDF3 /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D3D45F1DBC34260052CDF3 /* CatNode.swift */; };
 		A0E762E51DBBC58F00CF5F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E762E41DBBC58F00CF5F70 /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 		A0B65D501DBC5CF7004A217B /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		A0B65D511DBC5CF7004A217B /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		A0B65D5E1DBC5F79004A217B /* BlockNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
+		A0B65D601DBD15D4004A217B /* MessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
 		A0D3D45D1DBC32020052CDF3 /* BedNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
 		A0D3D45F1DBC34260052CDF3 /* CatNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
 		A0E762E11DBBC58F00CF5F70 /* CatNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				A0E762E61DBBC58F00CF5F70 /* GameScene.sks */,
+				A0B65D601DBD15D4004A217B /* MessageNode.swift */,
 				A01FC19B1DBBCFAA00E61D7A /* Cat.sks */,
 				A01FC19D1DBBD76800E61D7A /* CatCurl.sks */,
 				A01FC19F1DBBD81F00E61D7A /* CatWakeUp.sks */,
@@ -267,6 +270,7 @@
 				A0B65D5A1DBC5CF7004A217B /* SKTAudio.swift in Sources */,
 				A0B65D521DBC5CF7004A217B /* CGFloat+Extensions.swift in Sources */,
 				A0E762E51DBBC58F00CF5F70 /* AppDelegate.swift in Sources */,
+				A0B65D611DBD15D4004A217B /* MessageNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

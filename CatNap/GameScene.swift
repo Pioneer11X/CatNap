@@ -22,9 +22,11 @@ struct PhysicsCategory {
     static let Cat: UInt32 = 1;
     static let Block: UInt32 = 2;
     static let Bed: UInt32 = 4;
+    static let Edge : UInt32 = 8;
+    static let Label: UInt32 = 16;
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var bedNode: BedNode!;
     var catNode: CatNode!;
@@ -48,6 +50,8 @@ class GameScene: SKScene {
         let playableRect = CGRect(x:0, y: playableMargin, width: size.width, height: size.height - playableMargin * 2);
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect);
+        physicsWorld.contactDelegate = self;
+        physicsBody?.categoryBitMask = PhysicsCategory.Edge;
         
         enumerateChildNodes(withName: "//*"){
             // Matches all nodes.
@@ -111,5 +115,36 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask;
+        if collision == PhysicsCategory.Cat | PhysicsCategory.Bed {
+            print("Success");
+        }else{
+            print("Fail");
+            lose();
+        }
+        
+    }
+    
+    func inGameMessage(text: String){
+        let message = MessageNode(message: text);
+        message.position = CGPoint(x: frame.midX, y: frame.midY);
+        addChild(message);
+    }
+    
+    func newGame(){
+        let scene = GameScene(fileNamed: "GameScene");
+        scene!.scaleMode = scaleMode;
+        view!.presentScene(scene);
+    }
+    
+    func lose(){
+        SKTAudio.sharedInstance().pauseBackgroundMusic();
+        SKTAudio.sharedInstance().playSoundEffect("lose.mp3");
+        
+        inGameMessage(text: "Try Again..");
+        perform(#selector(newGame), with: nil, afterDelay: 5);
     }
 }
